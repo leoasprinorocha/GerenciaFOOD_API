@@ -7,18 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Hangfire.AspNetCore" Version="1.7.30" />
-    <PackageReference Include="Hangfire.Core" Version="1.7.30" />
-    <PackageReference Include="Hangfire.MemoryStorage" Version="1.7.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.11" />
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Hangfire.AspNetCore" version="1.7.30" />
+    <PackageReference Include="Hangfire.Core" version="1.7.30" />
+    <PackageReference Include="Hangfire.MemoryStorage" version="1.7.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" version="6.0.11" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" version="1.14.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" version="5.6.3" />
 
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GerenciaFood_Domain\GerenciaFood_Domain.csproj" Version="1.0.0.0" />
-    <ProjectReference Include="..\GerenciaFood_Services\GerenciaFood_Services.csproj" Version="1.0.0.0" />
+    <ProjectReference Include="..\GerenciaFood_Domain\GerenciaFood_Domain.csproj" version="1.0.0.0" />
+    <ProjectReference Include="..\GerenciaFood_Services\GerenciaFood_Services.csproj" version="1.0.0.0" />
   </ItemGroup>
 
 </Project>

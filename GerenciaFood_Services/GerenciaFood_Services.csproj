@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="7.0.0" />
-    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.10.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.10.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" ersion="7.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" version="6.10.0" />
+    <PackageReference Include="Newtonsoft.Json" version="11.0.1" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" version="7.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" version="6.10.0" />
   </ItemGroup>
 
   <ItemGroup>
