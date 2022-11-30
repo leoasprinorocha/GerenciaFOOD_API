@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="12.0.0" />
     <PackageReference Include="Hangfire.AspNetCore" Version="1.7.30" />
     <PackageReference Include="Hangfire.Core" Version="1.7.30" />
     <PackageReference Include="Hangfire.MemoryStorage" Version="1.7.0" />
@@ -18,8 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GerenciaFood_Domain\GerenciaFood_Domain.csproj" Version="1.0.0.0"/>
-    <ProjectReference Include="..\GerenciaFood_Services\GerenciaFood_Services.csproj" Version="1.0.0.0"/>
+    <ProjectReference Include="..\GerenciaFood_Domain\GerenciaFood_Domain.csproj" Version="1.0.0.0" />
+    <ProjectReference Include="..\GerenciaFood_Services\GerenciaFood_Services.csproj" Version="1.0.0.0" />
   </ItemGroup>
 
 </Project>
