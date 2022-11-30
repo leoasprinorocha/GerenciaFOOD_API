@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -18,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GerenciaFood_Domain\GerenciaFood_Domain.csproj" />
-    <ProjectReference Include="..\GerenciaFood_Services\GerenciaFood_Services.csproj" />
+    <ProjectReference Include="..\GerenciaFood_Domain\GerenciaFood_Domain.csproj" Version="1.0.0.0"/>
+    <ProjectReference Include="..\GerenciaFood_Services\GerenciaFood_Services.csproj" Version="1.0.0.0"/>
   </ItemGroup>
 
 </Project>
