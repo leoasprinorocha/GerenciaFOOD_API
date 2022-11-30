@@ -1,3 +1,4 @@
+using GerenciaFOOD_API.Configuration;
 using GerenciaFOOD_API.Controllers;
 using Hangfire;
 using Hangfire.MemoryStorage;
@@ -36,6 +37,7 @@ namespace GerenciaFOOD_API
             services.AddSingleton<IBackgroundProcessingServer, BackgroundProcessingServer>();
 
             services.AddControllers();
+            services.AddIoCServices();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "GerenciaFOOD_API", Version = "v1" });
@@ -90,7 +92,7 @@ namespace GerenciaFOOD_API
             });
         }
 
-        
+
         public async Task RestartHangFireServer(IApplicationBuilder app)
         {
             await Task.Run(async () =>
