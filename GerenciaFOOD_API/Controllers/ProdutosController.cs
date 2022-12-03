@@ -18,6 +18,7 @@ namespace GerenciaFOOD_API.Controllers
             List<ProdutoMock> products = new List<ProdutoMock>();
             products.Add(new ProdutoMock() { Id = 1, Name = "Lanche" });
             products.Add(new ProdutoMock() { Id = 2, Name = "Suco" });
+            products.Add(new ProdutoMock() { Id = 3, Name = "Pizza" });
 
             return Ok(products);
 
