@@ -7,11 +7,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GerenciaFOOD_API", "Gerenci
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{B45CE1C5-A5C0-4B5E-BF82-C3D3FEF434C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerenciaFood_Domain", "GerenciaFood_Domain\GerenciaFood_Domain.csproj", "{7CA38DE9-0E45-4D0E-864D-22AD775CBEED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GerenciaFood_Domain", "GerenciaFood_Domain\GerenciaFood_Domain.csproj", "{7CA38DE9-0E45-4D0E-864D-22AD775CBEED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{01F539BE-E985-408A-9AB4-CA8CC63D5FC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerenciaFood_Services", "GerenciaFood_Services\GerenciaFood_Services.csproj", "{578B248C-9909-4591-B131-5DDC00F0076C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GerenciaFood_Services", "GerenciaFood_Services\GerenciaFood_Services.csproj", "{578B248C-9909-4591-B131-5DDC00F0076C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Read", "Read", "{13FC4E86-1116-441F-8A39-D41F02EE4452}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Write", "Write", "{5D4641D4-38C5-4E7F-B706-042370537A18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrerenciaFOOD_read_Infrastructure", "GrerenciaFOOD_read_Infrastructure\GrerenciaFOOD_read_Infrastructure.csproj", "{5A1D334B-6620-4FD7-AE47-13EFB0D5CCA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerenciaFOOD_read_Application", "GerenciaFOOD_read_Application\GerenciaFOOD_read_Application.csproj", "{E394C08C-75DA-426D-B443-67FCB2E4E82F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +39,14 @@ Global
 		{578B248C-9909-4591-B131-5DDC00F0076C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{578B248C-9909-4591-B131-5DDC00F0076C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{578B248C-9909-4591-B131-5DDC00F0076C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A1D334B-6620-4FD7-AE47-13EFB0D5CCA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A1D334B-6620-4FD7-AE47-13EFB0D5CCA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A1D334B-6620-4FD7-AE47-13EFB0D5CCA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A1D334B-6620-4FD7-AE47-13EFB0D5CCA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E394C08C-75DA-426D-B443-67FCB2E4E82F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E394C08C-75DA-426D-B443-67FCB2E4E82F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E394C08C-75DA-426D-B443-67FCB2E4E82F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E394C08C-75DA-426D-B443-67FCB2E4E82F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +54,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{7CA38DE9-0E45-4D0E-864D-22AD775CBEED} = {B45CE1C5-A5C0-4B5E-BF82-C3D3FEF434C6}
 		{578B248C-9909-4591-B131-5DDC00F0076C} = {01F539BE-E985-408A-9AB4-CA8CC63D5FC5}
+		{5A1D334B-6620-4FD7-AE47-13EFB0D5CCA1} = {13FC4E86-1116-441F-8A39-D41F02EE4452}
+		{E394C08C-75DA-426D-B443-67FCB2E4E82F} = {13FC4E86-1116-441F-8A39-D41F02EE4452}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FBE959FC-1ECB-4B76-8CEE-E498B0F4BEA2}

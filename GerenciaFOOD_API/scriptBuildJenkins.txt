@@ -1,0 +1,42 @@
+﻿//Kaynak kodun adresi
+String githubUrl = "https://github.com/leoasprinorocha/GerenciaFOOD_API.git"
+
+//Kaynak kodun içerisindeki projenin ismi
+String projectName = "C:\\Users\\Administrator\\AppData\\Local\\Jenkins\\.jenkins\\workspace\\GerenciaFOOD_API_develop\\GerenciaFOOD_API"
+
+//Kaynak kodun publish edileceği dizin
+String publishedPath = ""
+
+//Hedef makinesindeki IIS'de tanımlı olan sitenizin ismi
+String iisApplicationName = "GerenciaFood_API_Develop"
+
+//Hedef makinesindeki IIS'de tanımlı olan sitenizin dizini
+String iisApplicationPath = "C:\\inetpub\\GerenciaFood_API_Develop"
+
+//Hedef makinesinin IP'si
+String targetServerIP = "192.168.1.11"
+
+node () {
+    stage('Checkout') {
+        checkout([
+            $class: 'GitSCM', 
+            branches: [[name: 'master']], 
+            doGenerateSubmoduleConfigurations: false, 
+            extensions: [], 
+            submoduleCfg: [], 
+            userRemoteConfigs: [[url: """ "${githubUrl}" """]]])
+    }
+    stage('Build') {
+        bat """
+        iisreset /stop
+        cd ${projectName}
+        dotnet build -c Release /p:Version=${BUILD_NUMBER}
+        dotnet publish -c Release --no-build
+        iisreset /start
+        """
+    }
+    stage('Deploy'){
+        withCredentials([usernamePassword(credentialsId: 'iis-credential', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) { bat """ "C:\\Program Files (x86)\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe" -verb:sync -source:iisApp="${WORKSPACE}\\${publishedPath}" -enableRule:AppOffline -dest:iisApp="${iisApplicationName}",ComputerName="https://${targetServerIP}:8172/msdeploy.axd",UserName="$USERNAME",Password="$PASSWORD",AuthType="Basic" -allowUntrusted """}
+        
+    }
+}

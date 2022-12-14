@@ -19,18 +19,17 @@ namespace GerenciaFOOD_API.Controllers
 
         [HttpPost]
         [Route("register")]
-        public async Task<IActionResult> Registrar(RegisterUserViewModel registerUser)
-        {
-            await _authenticationService.Registrar(registerUser);    
-            return Ok();
-        }
+        public async Task<IActionResult> Registrar(RegisterUserViewModel registerUser) =>
+        Ok(await _authenticationService.Registrar(registerUser));
+
 
         [HttpPost]
         [Route("login")]
-        public async Task<ActionResult> Login(LoginUserViewModel loginUser)
-        {
+        public async Task<ActionResult> Login(LoginUserViewModel loginUser) =>
+            Ok(await _authenticationService.Logar(loginUser));
 
-            return Ok();
-        }
+
+
+
     }
 }

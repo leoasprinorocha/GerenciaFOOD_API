@@ -1,5 +1,6 @@
 using GerenciaFOOD_API.Configuration;
 using GerenciaFOOD_API.Controllers;
+using GerenciaFood_Services.Helpers;
 using Hangfire;
 using Hangfire.MemoryStorage;
 using Hangfire.Server;
@@ -12,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
+using System.Configuration;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -35,6 +37,10 @@ namespace GerenciaFOOD_API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IBackgroundProcessingServer, BackgroundProcessingServer>();
+
+            var urlsApis = Configuration.GetSection("UrlsApis");
+            services.Configure<UrlsApis>(urlsApis);
+            
 
             services.AddControllers();
             services.AddIoCServices();

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace GerenciaFOOD_API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("Produtos")]
     [ApiController]
     public class ProdutosController : ControllerBase
     {
